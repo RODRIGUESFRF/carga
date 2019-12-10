@@ -1,2 +1,2 @@
 # carga
-JAR para dar carga em banco de dados via xml
+JAR para dar carga em banco com dados via csv.
