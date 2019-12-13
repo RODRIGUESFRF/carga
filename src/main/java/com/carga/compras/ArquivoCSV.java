@@ -85,10 +85,10 @@ public class ArquivoCSV {
 					segundaCompra.setAutorizacao_valor(Double.valueOf(linhaArray[8]));
 					segundaCompra.setAutorizacao_parcelas(Integer.parseInt(linhaArray[9]));
 					segundaCompra.setOrigem(linhaArray[10]);
-					segundaCompra.setProposta(linhaArray[11]);
+					segundaCompra.setProposta(utilString.limitaString(linhaArray[11],8));
 					segundaCompra.setApolice(linhaArray[12]);
 					segundaCompra.setPayware_retorno_codigo(Integer.parseInt(linhaArray[13]));
-				    segundaCompra.setPayware_retorno_descricao(utilString.limitaString(linhaArray[14]));
+				    segundaCompra.setPayware_retorno_descricao(utilString.limitaString(linhaArray[14],250));
 					segundaCompra.setCsu_statusAprovacaoRejeicao(linhaArray[15]);
 					ListSegundaCompra.add(segundaCompra);
 				}

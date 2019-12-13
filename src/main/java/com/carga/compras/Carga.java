@@ -20,8 +20,7 @@ public class Carga {
 	private static Logger logger = LoggerFactory.getLogger(Carga.class);
 	static private Map<String, String> params = new HashMap<>();
 	private static Path BASE_PATH = Paths.get(".");	
-	private static String payware_retorno_descricao;
-
+	
 	public static void main(String[] args) throws Exception {
 
 		try {
@@ -93,7 +92,7 @@ public class Carga {
 		
 		
 		List<PrimeiraCompra> listPrimeiraCompra = lerArq.LeChamadosCSV1Compra();
-		List<SegundaCompra> listSegundaCompra = lerArq.LeChamadosCSV2Compra(null);
+		List<SegundaCompra> listSegundaCompra = lerArq.LeChamadosCSV2Compra(toString());
 		
 		Conexao dbconn = new Conexao();		
 		dbconn.gravaPrimeiraCompra(listPrimeiraCompra);
