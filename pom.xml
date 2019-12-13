@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.carga.compras</groupId>
+	<artifactId>carga-compras</artifactId>
+	<version>1.0.0</version>
+
+	<name>Carga Compras</name>
+	<description>Módulo utilizado para carga de Primeira e Segunda Compra</description>
+
+
+	<!-- Codificação dos caracteres -->
+	<properties>
+
+		<!-- configurações do projeto -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- versão de dependências -->
+		<!-- <version.org.slf4j>1.7.7</version.org.slf4j> -->
+
+		<!-- versão das dependências internas -->
+		<version.logback-classic>1.0.13</version.logback-classic>
+		<version.mysql-connector-java>6.0.6</version.mysql-connector-java>
+
+		<!-- versão de dependências de teste -->
+		<version.junit>4.12</version.junit>
+
+		<!-- versão de plugins -->
+	</properties>
+
+	<!-- Parâmetros de execução -->
+	<build>
+		<!-- Nome do projeto empacotado -->
+		<finalName> Carga Compras </finalName>
+
+		<!-- Plugins -->
+		<plugins>
+			<!-- Compilador -->
+			<plugin>
+				<groupId> org.apache.maven.plugins </groupId>
+				<artifactId> maven-compiler-plugin </artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source> 1.8 </source>
+					<target> 1.8 </target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<parent>
+		<groupId>br.com.azulseguros.archetype</groupId>
+		<artifactId>parent-azul-rest-bom</artifactId>
+		<version>1.0.1</version>
+	</parent>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${version.mysql-connector-java}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${version.logback-classic}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.193</version>
+			<scope>test</scope>
+		</dependency>		
+		
+   
+	</dependencies>
+
+
+
+</project>
