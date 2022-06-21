@@ -22,7 +22,7 @@
 
 		<!-- versão das dependências internas -->
 		<version.logback-classic>1.0.13</version.logback-classic>
-		<version.mysql-connector-java>6.0.6</version.mysql-connector-java>
+		<version.mysql-connector-java>8.0.28</version.mysql-connector-java>
 
 		<!-- versão de dependências de teste -->
 		<version.junit>4.12</version.junit>
